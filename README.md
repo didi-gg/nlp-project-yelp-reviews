@@ -141,7 +141,5 @@ La generación de embeddings puede descargar pesos de Hugging Face y requerir co
 - Las reseñas y los ratings pertenecen a un corpus concreto; el rendimiento puede cambiar en otros restaurantes, fechas o dominios.
 - El desbalance hace especialmente importante revisar las métricas por clase y no solo una métrica global.
 - Los errores se concentran previsiblemente entre ratings vecinos, que pueden utilizar un vocabulario muy parecido.
-- VADER utiliza cortes heurísticos no calibrados con este dataset.
-- La extracción de aspectos se basa en diccionarios y no determina si una mención es positiva o negativa.
 
-Como siguientes pasos se propone realizar validación cruzada estratificada, revisar los errores más frecuentes, calibrar las probabilidades y evaluar splits por fecha o restaurante. Solo después de estas comprobaciones tendría sentido medir si un transformer aporta una mejora suficiente frente al modelo TF-IDF con bigramas.
+Como siguientes pasos se propone realizar validación cruzada estratificada, revisar los errores más frecuentes, calibrar las probabilidades y evaluar splits por fecha o restaurante. Después de estas comprobaciones se pude evaluar si tiene sentido medir si un transformer aporta una mejora suficiente frente al modelo TF-IDF con bigramas.
